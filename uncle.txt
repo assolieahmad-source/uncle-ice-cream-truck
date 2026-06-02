@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uncle Ice Cream - Chicago's Favorite Birthday Ice Cream Truck</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google Fonts: Fredoka (for headers) & Quicksand (for body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand
+:wght@500;700&display=swap" rel="stylesheet">
+<style>
+body {
+font-family: 'Quicksand', sans-serif;
+background-color: #fcfbf7;
+}
+h1, h2, h3, h4 {
+font-family: 'Fredoka', sans-serif;
+}
+/* Custom pulsating animation for the main booking buttons */
+@keyframes pulse-slow {
+0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(244, 63, 94, 0.4); }
+50% { transform: scale(1.04); box-shadow: 0 10px 25px rgba(244, 63, 94, 0.6); }
+}
+.animate-pulse-slow {
+animation: pulse-slow 2s infinite ease-in-out;
+}
+/* Soft pastel gradient backgrounds */
+.bg-pastel-gradient {
+background: linear-gradient(135deg, #e0f2fe 0%, #fce7f3 100%);
+}
+.bg-sprinkles {
+background-color: #fffbeb;
+background-image: radial-gradient(#f472b6 10%, transparent 11%),
+radial-gradient(#38bdf8 10%, transparent 11%);
+background-size: 40px 40px;
+background-position: 0 0, 20px 20px;
+background-opacity: 0.15;
+}
+/* Floating Birthday Elements Animations */
+@keyframes float-slow {
+0%, 100% { transform: translateY(0px) rotate(0deg); }
+50% { transform: translateY(-15px) rotate(5deg); }
+}
+@keyframes float-delayed {
+0%, 100% { transform: translateY(0px) rotate(0deg); }
+50% { transform: translateY(-20px) rotate(-8deg); }
+}
+.animate-float-1 { animation: float-slow 4s infinite ease-in-out; }
+.animate-float-2 { animation: float-delayed 5s infinite ease-in-out; }
+/* Happy Kid Dance/Celebrate Animation */
+@keyframes celebrate-kid {
+0%, 100% { transform: translateY(0) scaleY(1); }
+50% { transform: translateY(-8px) scaleY(1.02) rotate(2deg); }
+}
+.animate-celebrate {
+animation: celebrate-kid 1.5s infinite ease-in-out;
+display: inline-block;
+}
+</style>
+</head>
+<body class="text-slate-800 antialiased pb-24 md:pb-0">
+<!-- Header Navigation -->
+<header class="w-full bg-white/80 backdrop-blur-md sticky top-0 z-40 border-b
+border-pink-100 py-3 px-4 shadow-sm">
+<div class="max-w-6xl mx-auto flex justify-between items-center">
+<!-- Logo area -->
+<div class="flex items-center space-x-2">
+<span class="text-2xl animate-bounce">🍦</span>
+<span class="text-2xl font-bold tracking-tight text-yellow-500">Uncle <span
+class="text-sky-500">Ice Cream</span></span>
+</div>
+<!-- Badges & Call Link -->
+<div class="flex items-center space-x-4">
+<span class="hidden md:inline-flex items-center px-3 py-1 rounded-full text-xs
+font-bold bg-amber-100 text-amber-800">
+📍 Chicago & Suburbs
+</span>
+<a href="tel:+17085466699" class="bg-sky-500 hover:bg-sky-600 text-white font-bold
+py-2 px-4 rounded-full transition text-sm flex items-center space-x-2 shadow-sm transform
+hover:scale-105">
+<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0
+24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round"
+stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0
+01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1
+1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+<span>(708) 546-6699</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative bg-pastel-gradient py-12 px-4 overflow-hidden">
+<!-- Decorative Background Element -->
+<div class="absolute inset-0 bg-sprinkles opacity-20 pointer-events-none"></div>
+<!-- Floating Party Balloons and Confetti Icons -->
+<div class="absolute top-10 left-5 text-4xl opacity-40 animate-float-1
+pointer-events-none">🎈</div>
+<div class="absolute bottom-12 left-1/3 text-4xl opacity-30 animate-float-2
+pointer-events-none">🎉</div>
+<div class="absolute top-24 right-10 text-5xl opacity-40 animate-float-2
+pointer-events-none">🥳</div>
+<div class="absolute bottom-6 right-1/4 text-3xl opacity-30 animate-float-1
+pointer-events-none">✨</div>
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative
+z-10">
+<!-- Left Side: Copy -->
+<div class="text-center md:text-left space-y-6">
+<div class="inline-flex items-center space-x-2 bg-white/90 px-4 py-1.5 rounded-full
+border border-pink-200 shadow-sm">
+<span class="text-pink-500 text-sm font-bold tracking-wide uppercase">🎉 Now
+Booking For Your Event</span>
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+Chicago’s Favorite <span class="text-pink-500">Ice Cream Truck</span> for Your
+Next Special Event!
+</h1>
+<p class="text-lg md:text-xl text-slate-600 max-w-xl font-medium">
+Make your kid's birthday, block party, or school event completely unforgettable. We
+bring the sweet treats, cheerful music, and pure joy right to your curb!
+</p>
+<!-- High-Converting Pulsating CTA Button -->
+<div class="pt-2">
+<a href="tel:+17085466699" class="animate-pulse-slow inline-flex flex-col
+items-center justify-center bg-rose-500 hover:bg-rose-600 text-white text-xl md:text-2xl font-bold
+py-4 px-8 rounded-2xl transition transform active:scale-95 shadow-xl w-full sm:w-auto
+text-center border-b-4 border-rose-700">
+<span>Book Your Event Now!</span>
+<span class="text-amber-200 text-lg mt-1 font-semibold flex items-center
+justify-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current"
+viewBox="0 0 24 24"><path d="M21.384 17.791l-3.75-3.214a1.25 1.25 0
+00-1.616-.014l-1.141.882a15.344 15.344 0 01-5.193-5.192l.882-1.141a1.25 1.25 0
+00-.014-1.616L7.332 3.746a1.25 1.25 0 00-1.743-.092L3.13 5.86c-.958.825-1.22 2.197-.618
+3.328a21.416 21.416 0 0012.298 12.302c1.13.6 2.503.337 3.329-.62l2.122-2.458a1.25 1.25 0
+00-.077-1.621z"/></svg>
++1 (708) 546-6699
+</span>
+</a>
+<p class="text-xs text-slate-500 mt-3 font-semibold">☀️ Tapping calls immediately •
+Serving Chicago & All Surrounding Suburbs</p>
+</div>
+</div>
+<!-- Right Side: Happy Kids Photo Frame & Graphics -->
+<div class="relative flex flex-col justify-center items-center">
+<div class="absolute w-72 h-72 bg-emerald-100/60 blur-3xl -z-10"></div>
+<div class="absolute w-72 h-72 bg-yellow-100/60 blur-3xl -z-10 translate-x-12
+translate-y-12"></div>
+<!-- Graphic Frame with Birthday Party Image -->
+<div class="bg-white p-4 rounded-3xl shadow-2xl rotate-2 max-w-sm md:max-w-md
+border border-pink-100 transition transform hover:rotate-0 duration-300">
+<img
+src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop
+&q=80&w=600" alt="Happy Kids Celebrating Birthday" class="rounded-2xl object-cover w-full
+h-64 md:h-80">
+<div class="pt-4 pb-2 text-center">
+<div class="flex justify-center space-x-1 text-yellow-400 text-xl font-bold
+animate-pulse">
+<span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+</div>
+<p class="text-xs font-bold text-slate-500 italic mt-1">"The best birthday surprise
+ever! The kids went crazy!" - Sarah M., Chicago</p>
+</div>
+</div>
+<!-- Animated Celebrating Characters overlay -->
+<div class="flex space-x-8 mt-6">
+<div class="text-center animate-celebrate" style="animation-delay: 0s;">
+<span class="text-5xl block">👦🎉</span>
+<span class="text-xs font-bold text-pink-500 bg-pink-100 px-2 py-0.5
+rounded-full">YAY!</span>
+</div>
+<div class="text-center animate-celebrate" style="animation-delay: 0.4s;">
+<span class="text-5xl block">🍦👧</span>
+<span class="text-xs font-bold text-sky-500 bg-sky-100 px-2 py-0.5
+rounded-full">ICE CREAM!</span>
+</div>
+<div class="text-center animate-celebrate" style="animation-delay: 0.2s;">
+<span class="text-5xl block">🥳🎂</span>
+<span class="text-xs font-bold text-amber-500 bg-amber-100 px-2 py-0.5
+rounded-full">BEST DAY!</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us / Features Section -->
+<section class="py-16 px-4 max-w-6xl mx-auto">
+<div class="text-center max-w-xl mx-auto mb-12">
+<h2 class="text-3xl md:text-4xl font-bold text-slate-900">Why Chicago Chooses Chicity
+Ice Cream 🍦</h2>
+<p class="text-slate-600 mt-2 font-medium">We do more than just drop off treats—we
+bring a complete party experience!</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-emerald-50/60 p-8 rounded-2xl border border-emerald-100 text-center
+hover:shadow-xl transition duration-300 group transform hover:-translate-y-2">
+<div class="w-16 h-16 bg-emerald-400 text-white rounded-full flex items-center
+justify-center text-3xl mx-auto mb-4 shadow-sm group-hover:scale-110 transition">🎁</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Perfect for Birthdays</h3>
+<p class="text-slate-600 text-sm leading-relaxed">Specially tailored packages for kids'
+parties. We play bright music, provide photo opportunities, and make the birthday child feel like
+a superstar!</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-sky-50/60 p-8 rounded-2xl border border-sky-100 text-center
+hover:shadow-xl transition duration-300 group transform hover:-translate-y-2">
+<div class="w-16 h-16 bg-sky-400 text-white rounded-full flex items-center
+justify-center text-3xl mx-auto mb-4 shadow-sm group-hover:scale-110 transition">📍</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Serving All of Chicago</h3>
+<p class="text-slate-600 text-sm leading-relaxed">From the heart of the Windy City to
+the surrounding local neighborhoods and suburbs, our trucks are highly reliable, always
+punctual, and ready to roll.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-pink-50/60 p-8 rounded-2xl border border-pink-100 text-center
+hover:shadow-xl transition duration-300 group transform hover:-translate-y-2">
+<div class="w-16 h-16 bg-pink-400 text-white rounded-full flex items-center
+justify-center text-3xl mx-auto mb-4 shadow-sm group-hover:scale-110 transition">🍦</div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Delicious Variety</h3>
+<p class="text-slate-600 text-sm leading-relaxed">A massive selection of everyone’s
+classic favorite ice cream bars, snow cones, and premium popsicles. There's a perfect treat for
+every guest!</p>
+</div>
+</div>
+</section>
+<hr class="border-t border-slate-100 max-w-4xl mx-auto">
+<!-- How It Works Section -->
+<section class="py-16 px-4 bg-amber-50/40 rounded-3xl max-w-5xl mx-auto my-8 relative
+overflow-hidden">
+<div class="text-center max-w-xl mx-auto mb-12">
+<h2 class="text-3xl font-bold text-slate-900">Booking Your Truck is Easy as 1-2-3!</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+<!-- Step 1 -->
+<div class="relative text-center px-4">
+<div class="text-5xl font-black text-amber-200/80 absolute -top-6 left-1/2 transform
+-translate-x-1/2 select-none z-0">01</div>
+<div class="relative z-10">
+<h4 class="text-lg font-bold text-slate-900 mb-1">Pick a Date & Time</h4>
+<p class="text-slate-600 text-sm">Choose the special day for your child's birthday
+party or local community event.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative text-center px-4">
+<div class="text-5xl font-black text-pink-200/80 absolute -top-6 left-1/2 transform
+-translate-x-1/2 select-none z-0">02</div>
+<div class="relative z-10">
+<h4 class="text-lg font-bold text-slate-900 mb-1">Call Us to Confirm</h4>
+<p class="text-slate-600 text-sm">Tap any button to ring us directly at <span
+class="font-bold text-pink-600">(708) 546-6699</span> to instantly lock in your slot.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative text-center px-4">
+<div class="text-5xl font-black text-sky-200/80 absolute -top-6 left-1/2 transform
+-translate-x-1/2 select-none z-0">03</div>
+<div class="relative z-10">
+<h4 class="text-lg font-bold text-slate-900 mb-1">We Bring the Party!</h4>
+<p class="text-slate-600 text-sm">Our colorful ice cream truck arrives fully stocked
+and loaded with premium sweets and joyful tunes!</p>
+</div>
+</div>
+</section>
+<!-- Simple, Trustworthy Footer -->
+<footer class="bg-slate-900 text-slate-400 text-center py-12 px-4 mt-12">
+<div class="max-w-6xl mx-auto space-y-4">
+<p class="text-white text-xl font-bold">Uncle Ice Cream Truck Rental</p>
+
+<div style="margin-top:12px; text-align:center;">
+  <a href="https://www.instagram.com/a.assolie" target="_blank" rel="noopener">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+         alt="Instagram"
+         width="40"
+         height="40"
+         style="display:inline-block;">
+  </a>
+</div>
+
+  
+<p class="text-sm max-w-md mx-auto">Bringing smiles, nostalgia, and premium service
+to birthdays and special celebrations all across the Greater Chicago area.</p>
+<div class="pt-4 border-t border-slate-800 text-xs text-slate-500">
+&copy; Chicity Ice Cream. All rights reserved.
+</div>
+</div>
+</div>
+</footer>
+<!-- STICKY MOBILE-ONLY BOTTOM BANNER -->
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-pink-200 p-3
+shadow-[0_-8px_24px_rgba(0,0,0,0.12)] md:hidden">
+<a href="tel:+17085466699" class="w-full bg-rose-500 hover:bg-rose-600
+active:bg-rose-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center
+space-x-3 transition tracking-wide text-lg shadow-sm">
+<svg xmlns="http://www.w3.org/2000/xl" class="h-6 w-6 fill-current animate-bounce"
+viewBox="0 0 24 24"><path d="M21.384 17.791l-3.75-3.214a1.25 1.25 0
+00-1.616-.014l-1.141.882a15.344 15.344 0 01-5.193-5.192l.882-1.141a1.25 1.25 0
+00-.014-1.616L7.332 3.746a1.25 1.25 0 00-1.743-.092L3.13 5.86c-.958.825-1.22 2.197-.618
+3.328a21.416 21.416 0 0012.298 12.302c1.13.6 2.503.337 3.329-.62l2.122-2.458a1.25 1.25 0
+00-.077-1.621z"/></svg>
+<span>Tap to Book Now: (708) 546-6699</span>
+</a>
+</div>
+ 
+</body>
+</html>
